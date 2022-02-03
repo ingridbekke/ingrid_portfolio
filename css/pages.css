@@ -1,0 +1,38 @@
+.hero-section {
+  background-color: #333;
+  position: relative;
+  width: 100%;
+
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffab3f;
+}
+
+.hero-section img {
+  display: inline-block;
+  width: 70%;
+}
+
+.section-1 p {
+  line-height: 2.375rem;
+  max-width: 30ch;
+  margin: auto;
+}
+
+.section-1 img {
+  width: 70%;
+}
+@media screen and (min-width: 954px) {
+  .section-1 p {
+    max-width: 50ch;
+  }
+  .hero-section {
+    height: 50vw;
+    width: 100vw;
+  }
+  .section-1 img {
+    width: 40%;
+  }
+}
