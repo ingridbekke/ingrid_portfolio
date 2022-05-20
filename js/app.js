@@ -19,8 +19,22 @@ function init() {
 
 init();
 
-function getPost(pageValue) {
-  return pageValue;
+async function getPost(pageValue) {
+  const project = document.querySelector(".project");
+  const post =
+    await fetch(`https://${projectID}.api.sanity.io/v1/data/query/production?query=*
+  [slug.current == "${pageValue}"]
+  `);
+  const { result } = await post.json();
+  console.log(result);
+  // her legger vi inn project variabel ferdig <img> element returnert fra stætte funksjon som håndtere bilder
+
+  const title = document.createElement("h1");
+  project.append(handleImage(result[0].mainImage.asset._ref));
+  title.innerText = result[0].title;
+  project.append(title);
+
+  project.append(handleParagraphs(result[0].body));
 }
 
 async function getPosts() {

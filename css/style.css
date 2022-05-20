@@ -15,7 +15,6 @@ main {
 
 header {
   position: fixed;
-
   width: 100%;
   min-height: 80px;
   color: white;
@@ -51,77 +50,123 @@ header {
   border-bottom: 2px solid black;
 }
 
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 h1 {
   padding: 2rem;
-  margin: 3rem;
+  margin: 2rem;
+  font-family: var(--ff-heading);
 }
+
 .lead-paragraph {
   margin: 3rem;
   padding: 2rem;
-
   line-height: 2.375rem;
   padding-bottom: 3.5rem;
+  text-align: left;
 }
-
+.title-h2 {
+  padding: 2rem;
+  margin: 2rem;
+}
 .menu-projects {
   display: grid;
-
   grid-template-columns: 2fr;
   justify-content: center;
   align-content: center;
 }
-.projects {
-  width: 400px;
-  height: 400px;
-  background-color: white;
 
-  border-radius: 25px;
-  margin: auto;
-  margin-bottom: 3rem;
-  color: black;
+.project {
+  margin: 1rem;
+  padding: 1rem;
+}
+.project p {
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 2.375rem;
+  max-width: 50ch;
+  text-align: left;
+  text-decoration: none;
+}
+
+.project h2 {
+  font-family: var(--ff-bodytext);
+  font-size: var(--fs-600);
+  font-style: bold;
   text-align: center;
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-}
-.projects p {
-  display: inline-block;
-
-  padding: 50px 0 50px;
-  font-size: var(--fs-400);
-}
-.projects:hover {
-  opacity: 40%;
-  cursor: pointer;
 }
 
-.project1 img {
-  width: 900px;
+.project-image {
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
-  padding: 2rem;
+  object-fit: cover;
 }
 
-.project2 {
-  background-color: #333;
-  color: aliceblue;
-}
-.project2 img {
-  width: 700px;
+.work-cover {
+  padding: 1.5rem;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
-  padding: 2rem;
 }
 
-@media screen and (min-width: 953px) {
+.article {
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 954px) {
   .menu-projects {
     grid-template-columns: 1fr 1fr;
   }
   .main-menu-desktop {
     display: block;
+  }
+
+  h1 {
+    padding: 2rem;
+    margin: 2rem;
+    font-family: var(--ff-heading);
+  }
+  .lead-paragraph {
+    margin: 2rem;
+    padding: 2rem;
+    line-height: 2.375rem;
+    padding-bottom: 3.5rem;
+    text-align: left;
+  }
+  .project {
+    margin: 2rem;
+    padding: 2rem;
+  }
+  .project img {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
+  .project p {
+    margin: 1.5rem 1.5rem;
+    padding: 1rem;
+    line-height: 2.375rem;
+    max-width: 100ch;
+  }
+  .lead-paragraph {
+    margin: auto;
+    padding: 3rem;
+  }
+  .basic-image {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
   }
 }
